@@ -1,0 +1,37 @@
+{
+    "name": "reactmore/durianpay-client-api",
+    "type": "library",
+    "description": "Client API Durianpay Unofficial",
+    "homepage": "https://github.com/reactmore/durianpay-client-api",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "reactmore",
+            "email": "reactmorecom@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Reactmore\\Durian\\": "app/"
+        }
+    },
+    "require": {
+        "php": "^7.0 | ^8.0",
+        "guzzlehttp/guzzle": "^6.5 || ^7.0",
+        "vlucas/phpdotenv": "^4.2 || ^5.0",
+        "symfony/http-foundation": "^5.3"
+    },
+    "require-dev": {
+        "mockery/mockery": "~1.3",
+        "php-parallel-lint/php-parallel-lint": "^1.3",
+        "phpunit/phpunit": "*"
+    },
+    "scripts": {
+        "check-code": [
+            "vendor/bin/parallel-lint . --exclude vendor",
+            "vendor/bin/phpunit tests"
+        ]
+    }
+}
