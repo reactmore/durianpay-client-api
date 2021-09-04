@@ -1,6 +1,6 @@
 <?php
 
-namespace Reactmore\Durian\Helpers;
+namespace Reactmore\Durianpay\Helpers;
 
 class FileHelper
 {

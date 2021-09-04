@@ -1,10 +1,10 @@
 <?php
 
-namespace Reactmore\Durian;
+namespace Reactmore\Durianpay;
 
 use Dotenv\Dotenv;
-use Reactmore\Durian\Helpers\FileHelper;
-use Reactmore\Durian\Helpers\Validations\MainValidator;
+use Reactmore\Durianpay\Helpers\FileHelper;
+use Reactmore\Durianpay\Helpers\Validations\MainValidator;
 
 
 class Main
@@ -14,7 +14,7 @@ class Main
 
     public $credential, $stage;
 
-    public function __construct(array $data = [])
+    public function __construct($data = [])
     {
         MainValidator::validateCredentialRequest($data);
         $this->setEnvironmentFile();
@@ -42,22 +42,10 @@ class Main
 
         $this->stage = strtoupper($this->stage) == 'LIVE' ? 'LIVE' : 'SANDBOX';
 
-        if (empty($data['apiKey'])) {
-            $this->credential['apiKey'] = isset($_ENV['DURIAN_APIKEY_' . $this->stage]) ? $_ENV['DURIAN_APIKEY_' . $this->stage] : '';
+        if (empty($data['apikey'])) {
+            $this->credential['apikey'] = isset($_ENV['DURIAN_APIKEY_' . $this->stage]) ? $_ENV['DURIAN_APIKEY_' . $this->stage] : '';
         } else {
-            $this->credential['apiKey'] = $data['apiKey'];
-        }
-
-        if (empty($data['privateKey'])) {
-            $this->credential['privateKey'] = isset($_ENV['DURIAN_PKEY_' . $this->stage]) ? $_ENV['DURIAN_PKEY_' . $this->stage] : '';
-        } else {
-            $this->credential['privateKey'] = $data['privateKey'];
-        }
-
-        if (empty($data['merchantCode'])) {
-            $this->credential['merchantCode'] = isset($_ENV['DURIAN_MERCHANTCODE_' . $this->stage]) ? $_ENV['DURIAN_MERCHANTCODE_' . $this->stage] : '';
-        } else {
-            $this->credential['merchantCode'] = $data['merchantCode'];
+            $this->credential['apikey'] = $data['apikey'];
         }
     }
 }

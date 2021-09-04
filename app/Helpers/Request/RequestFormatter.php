@@ -1,8 +1,8 @@
 <?php
 
-namespace Reactmore\Tripay\Helpers\Request;
+namespace Reactmore\Durianpay\Helpers\Request;
 
-use Reactmore\Tripay\Helpers\Formats\StringFormatter;
+use Reactmore\Durianpay\Helpers\Formats\StringFormatter;
 
 class RequestFormatter
 {

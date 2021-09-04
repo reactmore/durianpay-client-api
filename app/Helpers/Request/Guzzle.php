@@ -1,10 +1,10 @@
 <?php
 
-namespace Reactmore\Durian\Helpers\Request;
+namespace Reactmore\Durianpay\Helpers\Request;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ConnectException;
-use Reactmore\Tripay\Helpers\Formats\ResponseFormatter;
+use Reactmore\Durianpay\Helpers\Formats\ResponseFormatter;
 
 class Guzzle
 {

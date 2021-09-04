@@ -1,6 +1,6 @@
 <?php
 
-namespace Reactmore\Durian\Helpers\Formats;
+namespace Reactmore\Durianpay\Helpers\Formats;
 
 class StringFormatter
 {

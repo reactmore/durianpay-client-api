@@ -1,9 +1,9 @@
 <?php
 
-namespace Reactmore\Durian\Helpers\Validations;
+namespace Reactmore\Durianpay\Helpers\Validations;
 
-use Reactmore\Durian\Exceptions\InvalidContentType;
-use Reactmore\Durian\Exceptions\MissingArguements;
+use Reactmore\Durianpay\Exceptions\InvalidContentType;
+use Reactmore\Durianpay\Exceptions\MissingArguements;
 
 class ValidationHelper
 {

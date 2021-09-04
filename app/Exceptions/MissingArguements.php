@@ -1,6 +1,6 @@
 <?php
 
-namespace Reactmore\Durian\Exceptions;
+namespace Reactmore\Durianpay\Exceptions;
 
 class MissingArguements extends BaseException
 {
