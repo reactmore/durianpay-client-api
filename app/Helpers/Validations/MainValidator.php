@@ -17,6 +17,5 @@ class MainValidator
     public static function validateCredentialRequest($request)
     {
         ValidationHelper::validateContentType($request);
-        ValidationHelper::validateContentFields($request, ['code']);
     }
 }

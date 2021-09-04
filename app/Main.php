@@ -5,7 +5,7 @@ namespace Reactmore\Durianpay;
 use Dotenv\Dotenv;
 use Reactmore\Durianpay\Helpers\FileHelper;
 use Reactmore\Durianpay\Helpers\Validations\MainValidator;
-
+use Reactmore\Durianpay\Services\Orders;
 
 class Main
 {
@@ -47,5 +47,10 @@ class Main
         } else {
             $this->credential['apikey'] = $data['apikey'];
         }
+    }
+
+    public function initOrders()
+    {
+        return new Orders($this->credential, $this->stage);
     }
 }
